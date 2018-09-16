@@ -8,8 +8,11 @@ Created using IcoMoon - icomoon.io
 
 @font-face {
   font-family: 'Nucleo Outline';
-  src: url('../../fonts/nucleo-outline.eot');
-  src: url('../../fonts/nucleo-outline.eot') format('embedded-opentype'), url('../../fonts/nucleo-outline.woff2') format('woff2'), url('../../fonts/nucleo-outline.woff') format('woff'), url('../../fonts/nucleo-outline.ttf') format('truetype');
+  src: url('../fonts/nucleo-outline.eot');
+  src: url('../fonts/nucleo-outline.eot') format('embedded-opentype'),
+  url('../fonts/nucleo-outline.woff2') format('woff2'),
+  url('../fonts/nucleo-outline.woff') format('woff'),
+  url('../fonts/nucleo-outline.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -57,18 +60,18 @@ Created using IcoMoon - icomoon.io
   list-style-type: none;
 }
 
-.nc-icon-ul>li {
+.nc-icon-ul > li {
   position: relative;
 }
 
-.nc-icon-ul>li>.now-ui-icons {
+.nc-icon-ul > li > .now-ui-icons {
   position: absolute;
   left: -1.57142857em;
   top: 0.14285714em;
   text-align: center;
 }
 
-.nc-icon-ul>li>.now-ui-icons.circle {
+.nc-icon-ul > li > .now-ui-icons.circle {
   top: -0.19047619em;
   left: -1.9047619em;
 }
@@ -87,6 +90,7 @@ Created using IcoMoon - icomoon.io
   0% {
     -webkit-transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
   }
@@ -96,6 +100,7 @@ Created using IcoMoon - icomoon.io
   0% {
     -moz-transform: rotate(0deg);
   }
+
   100% {
     -moz-transform: rotate(360deg);
   }
@@ -109,6 +114,7 @@ Created using IcoMoon - icomoon.io
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -126,7 +132,7 @@ Created using IcoMoon - icomoon.io
 	font icons
 -------------------------*/
 
-.now-ui-icons.ui-1_check:before {
+.now-ui-icons.ui-1_check:before{
   content: "\ea22";
 }
 
@@ -312,216 +318,4 @@ Created using IcoMoon - icomoon.io
 
 .now-ui-icons.objects_diamond:before {
   content: "\ea29";
-}
-
-.now-ui-icons.objects_globe:before {
-  content: "\ea2f";
-}
-
-.now-ui-icons.objects_key-25:before {
-  content: "\ea38";
-}
-
-.now-ui-icons.objects_planet:before {
-  content: "\ea46";
-}
-
-.now-ui-icons.objects_spaceship:before {
-  content: "\ea55";
-}
-
-.now-ui-icons.objects_support-17:before {
-  content: "\ea56";
-}
-
-.now-ui-icons.objects_umbrella-13:before {
-  content: "\ea5f";
-}
-
-.now-ui-icons.education_agenda-bookmark:before {
-  content: "\ea01";
-}
-
-.now-ui-icons.education_atom:before {
-  content: "\ea0c";
-}
-
-.now-ui-icons.education_glasses:before {
-  content: "\ea2d";
-}
-
-.now-ui-icons.education_hat:before {
-  content: "\ea30";
-}
-
-.now-ui-icons.education_paper:before {
-  content: "\ea42";
-}
-
-.now-ui-icons.shopping_bag-16:before {
-  content: "\ea0d";
-}
-
-.now-ui-icons.shopping_basket:before {
-  content: "\ea0b";
-}
-
-.now-ui-icons.shopping_box:before {
-  content: "\ea11";
-}
-
-.now-ui-icons.shopping_cart-simple:before {
-  content: "\ea1d";
-}
-
-.now-ui-icons.shopping_credit-card:before {
-  content: "\ea28";
-}
-
-.now-ui-icons.shopping_delivery-fast:before {
-  content: "\ea27";
-}
-
-.now-ui-icons.shopping_shop:before {
-  content: "\ea50";
-}
-
-.now-ui-icons.shopping_tag-content:before {
-  content: "\ea59";
-}
-
-.now-ui-icons.sport_trophy:before {
-  content: "\ea5d";
-}
-
-.now-ui-icons.sport_user-run:before {
-  content: "\ea60";
-}
-
-.now-ui-icons.tech_controller-modern:before {
-  content: "\ea26";
-}
-
-.now-ui-icons.tech_headphones:before {
-  content: "\ea31";
-}
-
-.now-ui-icons.tech_laptop:before {
-  content: "\ea36";
-}
-
-.now-ui-icons.tech_mobile:before {
-  content: "\ea3e";
-}
-
-.now-ui-icons.tech_tablet:before {
-  content: "\ea58";
-}
-
-.now-ui-icons.tech_tv:before {
-  content: "\ea5e";
-}
-
-.now-ui-icons.tech_watch-time:before {
-  content: "\ea62";
-}
-
-.now-ui-icons.text_align-center:before {
-  content: "\ea05";
-}
-
-.now-ui-icons.text_align-left:before {
-  content: "\ea06";
-}
-
-.now-ui-icons.text_bold:before {
-  content: "\ea0e";
-}
-
-.now-ui-icons.text_caps-small:before {
-  content: "\ea1b";
-}
-
-.now-ui-icons.gestures_tap-01:before {
-  content: "\ea5a";
-}
-
-.now-ui-icons.transportation_air-baloon:before {
-  content: "\ea03";
-}
-
-.now-ui-icons.transportation_bus-front-12:before {
-  content: "\ea17";
-}
-
-.now-ui-icons.travel_info:before {
-  content: "\ea04";
-}
-
-.now-ui-icons.travel_istanbul:before {
-  content: "\ea34";
-}
-
-.now-ui-icons.ui-1_bell-53:before {
-  content: "\ea0f";
-}
-
-.now-ui-icons.ui-1_calendar-60:before {
-  content: "\ea1a";
-}
-
-.now-ui-icons.ui-1_lock-circle-open:before {
-  content: "\ea35";
-}
-
-.now-ui-icons.ui-1_send:before {
-  content: "\ea4d";
-}
-
-.now-ui-icons.ui-1_settings-gear-63:before {
-  content: "\ea4e";
-}
-
-.now-ui-icons.ui-1_simple-add:before {
-  content: "\ea4f";
-}
-
-.now-ui-icons.ui-1_simple-delete:before {
-  content: "\ea54";
-}
-
-.now-ui-icons.ui-1_simple-remove:before {
-  content: "\ea53";
-}
-
-.now-ui-icons.ui-1_zoom-bold:before {
-  content: "\ea64";
-}
-
-.now-ui-icons.ui-2_chat-round:before {
-  content: "\ea20";
-}
-
-.now-ui-icons.ui-2_favourite-28:before {
-  content: "\ea2b";
-}
-
-.now-ui-icons.ui-2_like:before {
-  content: "\ea37";
-}
-
-.now-ui-icons.ui-2_settings-90:before {
-  content: "\ea4b";
-}
-
-.now-ui-icons.ui-2_time-alarm:before {
-  content: "\ea5c";
-}
-
-.now-ui-icons.users_circle-08:before {
-  content: "\ea23";
-}
-
-.now-ui-icons.users_single-02:before {
-  content: "\ea51";
 }
