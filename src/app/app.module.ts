@@ -10,9 +10,16 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ParselsListComponent } from './components/dumb/parsels-list/parsels-list.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, NavigationComponent, ParselsListComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    NavigationComponent,
+    ParselsListComponent,
+    LoginPageComponent
+  ],
   imports: [
     BrowserAnimationsModule,
     NgbModule.forRoot(),
