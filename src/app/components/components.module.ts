@@ -1,19 +1,20 @@
 ///<reference path="../../../node_modules/@angular/forms/src/form_providers.d.ts"/>
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NouisliderModule} from 'ng2-nouislider';
-import {JWBootstrapSwitchModule} from 'jw-bootstrap-switch-ng2';
-import {RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NouisliderModule } from 'ng2-nouislider';
+import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
+import { RouterModule } from '@angular/router';
 
-import {BasicelementsComponent} from './basicelements/basicelements.component';
-import {NavigationComponent} from './navigation/navigation.component';
-import {TypographyComponent} from './typography/typography.component';
-import {NucleoiconsComponent} from './nucleoicons/nucleoicons.component';
-import {ComponentsComponent} from './components.component';
-import {NotificationComponent} from './notification/notification.component';
-import {ModalBasicComponent} from './modal/modal.component';
+import { BasicelementsComponent } from './basicelements/basicelements.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { TypographyComponent } from './typography/typography.component';
+import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
+import { ComponentsComponent } from './components.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ModalBasicComponent } from './modal/modal.component';
+import { ParselsListComponent } from './dumb/parsels-list/parsels-list.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import {ModalBasicComponent} from './modal/modal.component';
     NouisliderModule,
     RouterModule,
     JWBootstrapSwitchModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ComponentsComponent,
@@ -32,9 +33,9 @@ import {ModalBasicComponent} from './modal/modal.component';
     TypographyComponent,
     NucleoiconsComponent,
     NotificationComponent,
-    ModalBasicComponent
+    ModalBasicComponent,
+    ParselsListComponent
   ],
   exports: [ComponentsComponent]
 })
-export class ComponentsModule {
-}
+export class ComponentsModule {}
