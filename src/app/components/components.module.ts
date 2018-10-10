@@ -14,7 +14,6 @@ import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
 import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ModalBasicComponent } from './modal/modal.component';
-import { ParselsListComponent } from './dumb/parsels-list/parsels-list.component';
 
 @NgModule({
   imports: [
@@ -33,8 +32,7 @@ import { ParselsListComponent } from './dumb/parsels-list/parsels-list.component
     TypographyComponent,
     NucleoiconsComponent,
     NotificationComponent,
-    ModalBasicComponent,
-    ParselsListComponent
+    ModalBasicComponent
   ],
   exports: [ComponentsComponent]
 })

@@ -9,9 +9,10 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ParselsListComponent } from './components/dumb/parsels-list/parsels-list.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, NavigationComponent],
+  declarations: [AppComponent, NavbarComponent, NavigationComponent, ParselsListComponent],
   imports: [
     BrowserAnimationsModule,
     NgbModule.forRoot(),
@@ -19,7 +20,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     RouterModule,
     AppRoutingModule,
     ComponentsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
