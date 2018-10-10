@@ -10,9 +10,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ParselsListComponent } from './components/dumb/parsels-list/parsels-list.component';
+import { DeliveryMapComponent } from './delivery-map/delivery-map.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, NavigationComponent, ParselsListComponent],
+  declarations: [AppComponent, NavbarComponent, NavigationComponent, ParselsListComponent, DeliveryMapComponent],
   imports: [
     BrowserAnimationsModule,
     NgbModule.forRoot(),
