@@ -5,10 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ParselsListComponent } from './components/dumb/parsels-list/parsels-list.component';
+import { DeliveryMapComponent } from './delivery-map/delivery-map.component';
 
 const routes: Routes = [
   { path: 'index', component: ParselsListComponent },
-  { path: 'login', component: LoginPageComponent }
+  { path: 'login', component: LoginPageComponent },
+  { path: 'map', component: DeliveryMapComponent }
 ];
 
 @NgModule({

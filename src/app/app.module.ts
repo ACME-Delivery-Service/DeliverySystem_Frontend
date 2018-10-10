@@ -14,7 +14,14 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { DeliveryMapComponent } from './delivery-map/delivery-map.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, NavigationComponent, ParselsListComponent, DeliveryMapComponent, LoginPageComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    NavigationComponent,
+    ParselsListComponent,
+    DeliveryMapComponent,
+    LoginPageComponent
+  ],
   imports: [
     BrowserAnimationsModule,
     NgbModule.forRoot(),
