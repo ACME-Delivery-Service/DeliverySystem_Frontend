@@ -1,13 +1,13 @@
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // this is needed!
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {RouterModule} from '@angular/router';
-import {AppRoutingModule} from './app.routing';
-import {ComponentsModule} from './components/components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
+import { ComponentsModule } from './components/components.module';
 
-import {AppComponent} from './app.component';
-import {NavbarComponent} from './shared/navbar/navbar.component';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
@@ -19,10 +19,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     RouterModule,
     AppRoutingModule,
     ComponentsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
