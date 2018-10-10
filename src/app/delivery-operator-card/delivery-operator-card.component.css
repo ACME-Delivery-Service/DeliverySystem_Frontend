@@ -1,0 +1,10 @@
+.custom-card {
+  display: inline-flex;
+  padding-top: 20px;
+  /*width: fit-content;*/
+  /*height: fit-content;*/
+}
+
+.padder {
+  padding: 5px 10px 5px 10px;
+}
