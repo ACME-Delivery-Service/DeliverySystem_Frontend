@@ -1,8 +1,18 @@
 .custom-card {
-  display: inline-flex;
-  padding-top: 20px;
   /*width: fit-content;*/
   /*height: fit-content;*/
+  position: relative;
+  display: block;
+  overflow: auto;
+}
+
+.card-element {
+  /*position: relative;*/
+  display: inline-block;
+  height: 100%;
+  line-height: 100%;
+  white-space: nowrap;
+  /*vertical-align: middle;*/
 }
 
 .padder {
