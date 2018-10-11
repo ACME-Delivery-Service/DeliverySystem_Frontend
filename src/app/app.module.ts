@@ -12,6 +12,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ParselsListComponent } from './components/dumb/parsels-list/parsels-list.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { DeliveryMapComponent } from './delivery-map/delivery-map.component';
+import { DeliveryOperatorCardComponent } from './delivery-operator-card/delivery-operator-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DeliveryMapComponent } from './delivery-map/delivery-map.component';
     NavigationComponent,
     ParselsListComponent,
     DeliveryMapComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    DeliveryOperatorCardComponent
   ],
   imports: [
     BrowserAnimationsModule,
