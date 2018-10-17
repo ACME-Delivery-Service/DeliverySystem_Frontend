@@ -8,9 +8,8 @@ describe('WorkCalendarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkCalendarComponent ]
-    })
-    .compileComponents();
+      declarations: [WorkCalendarComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

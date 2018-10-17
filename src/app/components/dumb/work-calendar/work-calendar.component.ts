@@ -7,23 +7,20 @@ import { CalendarEvent } from 'angular-calendar';
   styleUrls: ['./work-calendar.component.css']
 })
 export class WorkCalendarComponent implements OnInit {
-
   view = 'month';
 
   viewDate: Date = new Date();
 
   events: CalendarEvent[] = [];
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   getRandomTimeH() {
-    return Math.floor((Math.random() * 8) + 1);
+    return Math.floor(Math.random() * 8 + 1);
   }
 
   getRandomTimeM() {
-    return Math.floor((Math.random() * 60) + 1);
+    return Math.floor(Math.random() * 60 + 1);
   }
-
 }
