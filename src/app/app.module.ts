@@ -5,6 +5,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { ApplicationRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -32,9 +37,16 @@ import { DeliveryOperatorCardComponent } from './delivery-operator-card/delivery
     AppRoutingModule,
     ComponentsModule,
     ReactiveFormsModule,
-    ComponentsModule
+    ComponentsModule,
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAeQ3s5Pwv38ZTTo6YNbR3wrUSAYIIh1bQ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule {}

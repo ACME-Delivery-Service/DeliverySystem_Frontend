@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@agm/core@latest":
-  version "1.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@agm/core/-/core-1.0.0-beta.3.tgz#6ec7fd8629134c040f68663b14de3b4a60a8a011"
-  integrity sha512-nsyergarmMB4JCw7KGujj86ulgRYhEk8zXKRiJZdnju/irLvazQ/9Anlfsf1Rc5yph8sZrmQDwqLGZ6AqHhnzA==
+"@agm/core@^1.0.0-beta.5":
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@agm/core/-/core-1.0.0-beta.5.tgz#6dbceb666b2dbc4a868b97e1340a3faceb5f2113"
+  integrity sha512-LVENJqtBZEWpX+uJkGI0zgg+Xkm2KkktQm4ojZozArbeNvQkVL6pqVc04Mme6vvOzwJpD1cET5w4byC8Xaq1QQ==
 
 "@angular-devkit/architect@0.6.8":
   version "0.6.8"
@@ -5817,10 +5817,10 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
 
-prettier@^1.14.2:
-  version "1.14.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.2.tgz#0ac1c6e1a90baa22a62925f41963c841983282f9"
-  integrity sha512-McHPg0n1pIke+A/4VcaS2en+pTNjy4xF+Uuq86u/5dyDO59/TtFZtQ708QIRkEZ3qwKz3GVkVa6mpxK/CpB8Rg==
+prettier@^1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
+  integrity sha512-qZDVnCrnpsRJJq5nSsiHCE3BYMED2OtsI+cmzIzF1QIfqm5ALf8tEJcO27zV1gKNKRPdhjO0dNWnrzssDQ1tFg==
 
 prettierrc@^0.0.0-5:
   version "0.0.0-5"
@@ -8145,6 +8145,11 @@ yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
   integrity sha1-AI4G2AlDIMNy28L47XagymyKxBk=
+
+ymaps@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ymaps/-/ymaps-0.1.1.tgz#aab7707f3f1c998e05e6c935087b32998e92d98e"
+  integrity sha512-LCMgNCvPqRjwW4FWUT+Ly6T93W44OCYWFzFnTkUwMq0uy4B3VIRUN+uinX++idXtrJCnA/32FxEb/E505a0YUQ==
 
 yn@^2.0.0:
   version "2.0.0"

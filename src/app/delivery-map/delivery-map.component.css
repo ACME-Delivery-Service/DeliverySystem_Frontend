@@ -3,22 +3,25 @@
 }
 
 .map-and-table {
+  display: inline;
   position: relative;
 }
 
 .map {
+  position: relative;
   display: inline-block;
+  float: left;
+}
 
-  width: 70%;
-  height: 100%;
+.ag_map {
+  width: 920px;
+  height: 700px;
 }
 
 .drivers-table-div {
   display: inline-block;
   width: 30%;
   float: right;
-  /*position: relative;*/
-  /*top: 0;*/
 }
 
 .drivers-table {
