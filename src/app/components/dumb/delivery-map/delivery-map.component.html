@@ -3,73 +3,75 @@
   <h3>Maps</h3>
   <div class="map-and-table">
     <div class="map">
-      <img src="../../assets/img/map-dummy.png">
+      <agm-map class="ag_map" [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
     </div>
     <div class="drivers-table-div">
       <table class="drivers-table">
-    <thead>
-    <tr>
-      <th class="text-center"></th>
-      <th>Drivers</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td class="text-center">1</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">2</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">3</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">4</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">5</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">6</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">7</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">8</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    <tr>
-      <td class="text-center">9</td>
-      <td>
-        <app-delivery-operator-card></app-delivery-operator-card>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+        <thead>
+        <tr>
+          <th class="text-center"></th>
+          <th>Drivers</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="text-center">1</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">2</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">3</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">4</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">5</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">6</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">7</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">8</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">9</td>
+          <td>
+            <app-delivery-operator-card></app-delivery-operator-card>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
