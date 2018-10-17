@@ -13,7 +13,13 @@ import { ParselsListComponent } from './components/dumb/parsels-list/parsels-lis
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { DeliveryMapComponent } from './delivery-map/delivery-map.component';
 import { DeliveryOperatorCardComponent } from './delivery-operator-card/delivery-operator-card.component';
+import { DriverCardComponent } from './driver-card/driver-card.component';
+import { WorkCalendarComponent } from './work-calendar/work-calendar.component';
 
+
+import { CommonModule } from '@angular/common';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +28,17 @@ import { DeliveryOperatorCardComponent } from './delivery-operator-card/delivery
     ParselsListComponent,
     DeliveryMapComponent,
     LoginPageComponent,
-    DeliveryOperatorCardComponent
+    DeliveryOperatorCardComponent,
+    DriverCardComponent,
+    WorkCalendarComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     NgbModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
     FormsModule,
     RouterModule,
     AppRoutingModule,
