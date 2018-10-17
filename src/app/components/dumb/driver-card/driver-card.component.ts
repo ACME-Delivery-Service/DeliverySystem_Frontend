@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { OperatorInterface } from '../../../interfaces/operator-interface';
 
 @Component({
   selector: 'app-driver-card',
@@ -8,8 +9,13 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./driver-card.component.css']
 })
 export class DriverCardComponent implements OnInit {
+  @Input()
+  driver: OperatorInterface;
+
   closeResult: string;
   modalReference: any;
+  lat = 55.752134;
+  lng = 48.744498;
 
   constructor(private modalService: NgbModal) {}
 

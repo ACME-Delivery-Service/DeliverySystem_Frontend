@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ParcelModel } from '../../../models/parcel.model';
+import { ParcelInterface } from '../../../interfaces/parcel-interface';
 
 @Component({
   selector: 'app-parcels-table',
@@ -8,5 +8,9 @@ import { ParcelModel } from '../../../models/parcel.model';
 })
 export class ParcelsTableComponent {
   @Input()
-  parcels: ParcelModel[];
+  parcels: ParcelInterface[];
+
+  public getIndex(i: number): number {
+    return i + 1;
+  }
 }

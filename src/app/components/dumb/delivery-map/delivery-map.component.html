@@ -16,58 +16,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td class="text-center">1</td>
+        <tr *ngFor="let driver of drivers; let i = index;">
+          <td class="text-center">{{ getIndex(i) }}</td>
           <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">2</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">3</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">4</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">5</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">6</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">7</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">8</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">9</td>
-          <td>
-            <app-delivery-operator-card></app-delivery-operator-card>
+            <app-driver-card [driver]="driver"></app-driver-card>
           </td>
         </tr>
         </tbody>

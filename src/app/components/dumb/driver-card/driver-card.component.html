@@ -7,11 +7,11 @@
   </div>
   <div class="modal-body">
     <div class="custom-card">
-      <img src="assets/img/ryan.jpg " alt="Circle Image" class="rounded-circle card-element"
+      <img src="{{ driver.photo }}" alt="Circle Image" class="rounded-circle card-element"
            style="height: 100px">
       <div class="card-element">
-        <div class="name padder" style="font-size: 30px"> John Vorbob</div>
-        <div class="padder driver-status"> Occupied</div>
+        <div class="name padder" style="font-size: 30px"> {{ driver.status }}</div>
+        <div class="padder driver-status"> {{ driver.status }}</div>
       </div>
 
       <button type="button" class="btn btn-success card-element" style="float: right; width: 100px; height: 50px">Call
@@ -20,7 +20,9 @@
     <hr>
     <h4>Driver's location:</h4>
     <div class="map">
-      <img src="../../assets/img/map-dummy-2.png">
+      <agm-map class="map" [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
     </div>
     <div class="space"></div>
     <h4>Assigned parcels:</h4>
@@ -186,9 +188,9 @@
 
 <div class="custom-card">
   <div (click)="open(content)" class="card-content">
-    <img src="assets/img/ryan.jpg " alt="Circle Image" class="rounded-circle card-element"
+    <img src="{{ driver.photo }}" alt="Circle Image" class="rounded-circle card-element"
         style="height: 30px">
-    <div class="name mini-padder card-element"> John Vorbob</div>
+    <div class="name mini-padder card-element"> {{ driver.name }}</div>
   </div>
   <button type="button" class="btn btn-success card-element" style="float: right">Call</button>
 </div>
