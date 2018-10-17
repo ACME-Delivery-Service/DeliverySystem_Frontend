@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParselsListComponent } from './parsels-list.component';
+import { ParselsPageComponent } from './parsels-page.component';
 
 describe('ParselsListComponent', () => {
-  let component: ParselsListComponent;
-  let fixture: ComponentFixture<ParselsListComponent>;
+  let component: ParselsPageComponent;
+  let fixture: ComponentFixture<ParselsPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ParselsListComponent]
+      declarations: [ParselsPageComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ParselsListComponent);
+    fixture = TestBed.createComponent(ParselsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
