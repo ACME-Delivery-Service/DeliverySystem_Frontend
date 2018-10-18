@@ -1,0 +1,200 @@
+<ng-template class="modal fade" #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h5 class="modal-title">Driver's card</h5>
+  </div>
+  <div class="modal-body">
+    <div class="custom-card">
+      <img src="{{ driver.photo }}" alt="Circle Image" class="rounded-circle card-element"
+           style="height: 100px">
+      <div class="card-element">
+        <div class="name padder" style="font-size: 30px"> {{ driver.name }}</div>
+        <div class="padder driver-status"> {{ driver.status }}</div>
+      </div>
+
+      <button type="button" class="btn btn-success card-element" style="float: right; width: 100px; height: 50px"
+              placement="left"
+              ngbPopover="Sorry, telephony is not yet available."
+              popoverTitle="Asterisk">Call
+      </button>
+    </div>
+    <hr>
+    <h4>Driver's location:</h4>
+    <div class="map">
+      <agm-map class="map" [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+    <div class="space"></div>
+    <h4>Assigned parcels:</h4>
+    <table class="table">
+      <thead>
+      <tr>
+        <th></th>
+        <th class="text-center">#</th>
+        <th>Parcel ID</th>
+        <th>Estimated arrival</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">1</td>
+        <td>16027</td>
+        <td>11.10.2018 14:30</td>
+        <td>OK</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">2</td>
+        <td>16209</td>
+        <td>11.10.2018 15:30</td>
+        <td>OK</td>
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">3</td>
+        <td>16876</td>
+        <td>11.10.2018 18:45</td>
+        <td>DELAY</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">1</td>
+        <td>16098</td>
+        <td>12.10.2018 09:15</td>
+        <td>OK</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">1</td>
+        <td>16020</td>
+        <td>12.10.2018 19:35</td>
+        <td>DELAY</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">1</td>
+        <td>16735</td>
+        <td>13.10.2018 18:10</td>
+        <td>OK</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">1</td>
+        <td>17592</td>
+        <td>13.10.2018 17:50</td>
+        <td>OK</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">1</td>
+        <td>16027</td>
+        <td>13.10.2018 19:30</td>
+        <td>DELAY</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+        <td class="text-center">1</td>
+        <td>16027</td>
+        <td>13.10.2018 19:30</td>
+        <td>DELAY</td>
+
+        <td>
+          <button type="button" class="btn btn-warning">Reassign</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="space"></div>
+    <h4>Work time</h4>
+    <app-work-calendar></app-work-calendar>
+  </div>
+  <div class="modal-footer">
+    <!--<button type="button" class="btn btn-primary" (click)="close()">Save changes</button>-->
+    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+  </div>
+
+</ng-template>
+
+<div class="custom-card">
+  <div (click)="open(content)" class="card-content">
+    <img src="{{ driver.photo }}" alt="Circle Image" class="rounded-circle card-element"
+        style="height: 30px">
+    <div class="name mini-padder card-element"> {{ driver.name }}</div>
+  </div>
+  <button type="button" class="btn btn-success card-element" style="float: right">Call</button>
+</div>
+

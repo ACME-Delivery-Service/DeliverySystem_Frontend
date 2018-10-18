@@ -32,7 +32,7 @@
               "src/assets/sass/now-ui-kit.scss",
               "src/assets/scss/now-ui-dashboard.scss",
               "src/assets/css/demo.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [
               {

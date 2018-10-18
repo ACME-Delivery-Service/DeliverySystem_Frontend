@@ -1,0 +1,30 @@
+.table {
+  padding: 100px 60px 100px 60px;
+}
+
+.filter {
+  position: relative;
+  left: -10px;
+}
+
+.id-filter {
+  width: 80px;
+}
+
+.td-date {
+  width: 250px;
+}
+
+.td-id {
+  width: 160px;
+}
+
+.date-filter {
+  width: 120px;
+  display: inline-block;
+}
+
+.operator-filter {
+  width: 200px;
+}
+

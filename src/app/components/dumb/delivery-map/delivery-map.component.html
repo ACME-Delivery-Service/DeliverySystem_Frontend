@@ -1,0 +1,32 @@
+<app-navigation></app-navigation>
+<div class="table">
+  <h3>Maps</h3>
+  <div class="map-and-table">
+    <div class="map">
+      <agm-map class="ag_map" [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+    <div class="drivers-table-div">
+      <table class="drivers-table">
+        <thead>
+        <tr>
+          <th class="text-center"></th>
+          <th>Drivers</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let driver of drivers; let i = index;">
+          <td class="text-center">{{ getIndex(i) }}</td>
+          <td>
+            <app-driver-card [driver]="driver"></app-driver-card>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+

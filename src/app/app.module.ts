@@ -1,28 +1,32 @@
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; // this is needed!
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {RouterModule} from '@angular/router';
-import {AppRoutingModule} from './app.routing';
-import {ComponentsModule} from './components/components.module';
-
-import {AppComponent} from './app.component';
-import {NavbarComponent} from './shared/navbar/navbar.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
+import { AppComponent } from './app.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './components/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, NavigationComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserAnimationsModule,
     NgbModule.forRoot(),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    ComponentsModule,
     ReactiveFormsModule,
+    PagesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
