@@ -1,0 +1,25 @@
+<ng-template class="modal fade" #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h3 class="modal-title">Parcel info</h3>
+  </div>
+  <div class="modal-body">
+    <div class="parcel-info">
+      hello
+    </div>
+    <h5>Parcel's location:</h5>
+    <div class="map">
+      <agm-map class="map" [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+  <div class="modal-footer"></div>
+
+</ng-template>
+
+<div (click)="open(content)">
+  {{ parcel.id }}
+</div>
