@@ -7,7 +7,12 @@ import { CommonModule } from '@angular/common';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AgmCoreModule } from '@agm/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NgSemanticModule } from 'ng-semantic';
 import { ParcelsTableComponent } from './dumb/parcels-table/parcels-table.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +22,11 @@ import { ParcelsTableComponent } from './dumb/parcels-table/parcels-table.compon
     }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAeQ3s5Pwv38ZTTo6YNbR3wrUSAYIIh1bQ'
-    })
+    }),
+    MatSelectModule,
+    MatDatepickerModule,
+    NgSemanticModule,
+    ReactiveFormsModule
   ],
   declarations: [
     DeliveryMapComponent,

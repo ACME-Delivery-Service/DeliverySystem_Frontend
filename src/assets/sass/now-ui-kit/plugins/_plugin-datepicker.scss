@@ -285,7 +285,7 @@
 .bootstrap-datetimepicker-widget table td.today > div:before {
   content: '';
   display: inline-block;
-  border: 7px solid transparent;
+  border: 0 0 7px 7px solid transparent;
   border-bottom-color: #68B3C8;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -578,6 +578,7 @@ ngb-datepicker{
                         font: normal normal normal 14px/1 FontAwesome;
                         font-size: inherit;
                         text-rendering: auto;
+                        -webkit-font-smoothing: anitialised;
                         transform: none!important;
                         color: $primary-color;
                     }

@@ -19,7 +19,6 @@ import { SharedModule } from './components/shared.module';
       provide: DateAdapter,
       useFactory: adapterFactory
     }),
-    NgbModule.forRoot(),
     FormsModule,
     RouterModule,
     AppRoutingModule,
