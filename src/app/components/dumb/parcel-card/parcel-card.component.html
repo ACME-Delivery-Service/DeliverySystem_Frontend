@@ -7,11 +7,42 @@
   </div>
   <div class="modal-body">
     <div class="parcel-info">
-      hello
+      <h5>Info:</h5>
+      <table class="table">
+        <tr>
+          <td>ID</td>
+          <td>16209</td>
+        </tr>
+        <tr>
+        <td>Assigneg to</td>
+        <td><app-driver-card [driver]="parcel.operator"></app-driver-card></td>
+        </tr>
+        <tr>
+          <td>Estimated arrival</td>
+          <td>26.10.2018 15:56</td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td>OK</td>
+        </tr>
+        <tr>
+        <td>Customer</td>
+        <td><app-driver-card [driver]="parcel.operator"></app-driver-card></td>
+        </tr>
+        <tr>
+          <td>Date of order</td>
+          <td>23.10.2018</td>
+        </tr>
+        <tr>
+          <td>Last update</td>
+          <td>25.10.2018 07:38
+            Left sorting center</td>
+        </tr>
+      </table>
     </div>
-    <h5>Parcel's location:</h5>
+    <h5>Location:</h5>
     <div class="map">
-      <agm-map class="map" [latitude]="lat" [longitude]="lng">
+      <agm-map class="ag_map" [latitude]="lat" [longitude]="lng">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
       </agm-map>
     </div>
@@ -20,6 +51,6 @@
 
 </ng-template>
 
-<div (click)="open(content)">
+<div (click)="open(content)" class="card-content">
   {{ parcel.id }}
 </div>
