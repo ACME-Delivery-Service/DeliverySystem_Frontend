@@ -12,6 +12,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgSemanticModule } from 'ng-semantic';
 import { ParcelsTableComponent } from './dumb/parcels-table/parcels-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material-module';
 
 @NgModule({
   imports: [
@@ -25,8 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     }),
     MatSelectModule,
     MatDatepickerModule,
+    MaterialModule,
     NgSemanticModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   declarations: [
     DeliveryMapComponent,
