@@ -9,7 +9,6 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './components/shared.module';
-import {DemoMaterialModule} from './material-module';
 
 
 
@@ -29,7 +28,6 @@ import {DemoMaterialModule} from './material-module';
     ReactiveFormsModule,
     PagesModule,
     SharedModule,
-    DemoMaterialModule
   ],
   exports: [],
   providers: [],

@@ -8,12 +8,11 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AgmCoreModule } from '@agm/core';
 import { MatSelectModule } from '@angular/material/select';
-import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgSemanticModule } from 'ng-semantic';
 import { ParcelsTableComponent } from './dumb/parcels-table/parcels-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from '../material-module';
 
 @NgModule({
   imports: [
@@ -25,10 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAeQ3s5Pwv38ZTTo6YNbR3wrUSAYIIh1bQ'
     }),
-    MatToolbarModule,
-    MatButtonModule,
     MatSelectModule,
     MatDatepickerModule,
+    MaterialModule,
     NgSemanticModule,
     ReactiveFormsModule,
   ],
