@@ -9,6 +9,10 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './components/shared.module';
+import {DemoMaterialModule} from './material-module';
+
+
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,8 +28,10 @@ import { SharedModule } from './components/shared.module';
     AppRoutingModule,
     ReactiveFormsModule,
     PagesModule,
-    SharedModule
+    SharedModule,
+    DemoMaterialModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
