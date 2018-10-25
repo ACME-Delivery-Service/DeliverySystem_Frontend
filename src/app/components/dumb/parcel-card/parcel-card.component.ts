@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { OperatorInterface } from '../../../interfaces/operator-interface';
 import { ParcelInterface } from '../../../interfaces/parcel-interface';
 
 @Component({
@@ -8,9 +7,8 @@ import { ParcelInterface } from '../../../interfaces/parcel-interface';
   templateUrl: './parcel-card.component.html',
   styleUrls: ['./parcel-card.component.css']
 })
-export class ParcelCardComponent implements OnInit {
+export class ParcelCardComponent {
   @Input()
-  // driver: OperatorInterface;
   parcel: ParcelInterface;
 
   closeResult: string;
@@ -36,5 +34,4 @@ export class ParcelCardComponent implements OnInit {
     this.modalReference.close();
   }
 
-  ngOnInit() {}
 }

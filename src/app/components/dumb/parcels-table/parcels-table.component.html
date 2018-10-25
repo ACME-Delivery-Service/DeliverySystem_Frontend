@@ -29,7 +29,6 @@
     </tr>
     <tr *ngFor="let parcel of filteredParcels; let i = index">
       <td class="text-center">{{ getIndex(i) }}</td>
-      <!--<td>{{ parcel.id }}</td>-->
       <td>
         <app-parcel-card [parcel]="parcel"></app-parcel-card>
       </td>
