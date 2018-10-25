@@ -1,39 +1,42 @@
 <div [formGroup]="formGroup">
-<table class="table">
-  <thead>
-  <tr>
-    <th class="text-center">#</th>
-    <th>Parcel ID</th>
-    <th>Estimated arrival</th>
-    <th>Status</th>
-    <th>Delivery operator</th>
-  </tr>
-  </thead>
-  <tr>
-    <td></td>
-    <td class="td-id">
-      <input formControlName="id" type="text" placeholder="Insert ID" class="form-control filter id-filter" />
-    </td>
-    <td class="td-date">
-      <input formControlName="date" placeholder="Choose a date" class="form-control filter date-filter">
-    </td>
-    <td>
-      <mat-select formControlName="status">
-        <mat-option *ngFor="let status of availableStatuses" [value]="status">
-          {{ status }}
-        </mat-option>
-      </mat-select>
-    </td>
-    <td><input formControlName="operator" type="text" placeholder="Enter operator name" class="form-control filter operator-filter" /></td>
-  </tr>
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="text-center">#</th>
+      <th>Parcel ID</th>
+      <th>Estimated arrival</th>
+      <th>Status</th>
+      <th>Delivery operator</th>
+    </tr>
+    </thead>
+    <tr>
+      <td></td>
+      <td class="td-id">
+        <input formControlName="id" type="text" placeholder="Insert ID" class="form-control filter id-filter"/>
+      </td>
+      <td class="td-date">
+        <input formControlName="date" placeholder="Choose a date" class="form-control filter date-filter">
+      </td>
+      <td>
+        <mat-select formControlName="status">
+          <mat-option *ngFor="let status of availableStatuses" [value]="status">
+            {{ status }}
+          </mat-option>
+        </mat-select>
+      </td>
+      <td><input formControlName="operator" type="text" placeholder="Enter operator name"
+                 class="form-control filter operator-filter"/></td>
+    </tr>
     <tr *ngFor="let parcel of filteredParcels; let i = index">
       <td class="text-center">{{ getIndex(i) }}</td>
-      <td>{{ parcel.id }}</td>
+      <td>
+        <app-parcel-card [parcel]="parcel"></app-parcel-card>
+      </td>
       <td>{{ parcel.arrivalDate }}</td>
       <td>{{ parcel.status }}</td>
       <td>
         <app-driver-card [driver]="parcel.operator"></app-driver-card>
       </td>
     </tr>
-</table>
+  </table>
 </div>

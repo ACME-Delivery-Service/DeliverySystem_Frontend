@@ -1,9 +1,8 @@
-<app-navigation></app-navigation>
 <div class="table">
   <h3>Maps</h3>
   <div class="map-and-table">
     <div class="map">
-      <agm-map class="ag_map" [latitude]="lat" [longitude]="lng">
+      <agm-map class="ag-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
       </agm-map>
     </div>

@@ -1,0 +1,56 @@
+<ng-template class="modal fade" #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h3 class="modal-title">Parcel info</h3>
+  </div>
+  <div class="modal-body">
+    <div class="parcel-info">
+      <h5>Info:</h5>
+      <table class="table">
+        <tr>
+          <td>ID</td>
+          <td>16209</td>
+        </tr>
+        <tr>
+        <td>Assigned to</td>
+        <td><app-driver-card [driver]="parcel.operator"></app-driver-card></td>
+        </tr>
+        <tr>
+          <td>Estimated arrival</td>
+          <td>26.10.2018 15:56</td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td>OK</td>
+        </tr>
+        <tr>
+        <td>Customer</td>
+        <td><app-driver-card [driver]="parcel.operator"></app-driver-card></td>
+        </tr>
+        <tr>
+          <td>Date of order</td>
+          <td>23.10.2018</td>
+        </tr>
+        <tr>
+          <td>Last update</td>
+          <td>25.10.2018 07:38
+            Left sorting center</td>
+        </tr>
+      </table>
+    </div>
+    <h5>Location:</h5>
+    <div class="map">
+      <agm-map class="ag-map" [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+  <div class="modal-footer"></div>
+
+</ng-template>
+
+<div (click)="open(content)" class="card-content">
+  {{ parcel.id }}
+</div>

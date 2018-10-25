@@ -3,7 +3,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
-    <h5 class="modal-title">Driver's card</h5>
+    <h3 class="modal-title">Driver's card</h3>
   </div>
   <div class="modal-body">
     <div class="custom-card">
@@ -21,7 +21,7 @@
       </button>
     </div>
     <hr>
-    <h4>Driver's location:</h4>
+    <h5>Driver's location:</h5>
     <div class="map">
       <agm-map class="map" [latitude]="lat" [longitude]="lng">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
