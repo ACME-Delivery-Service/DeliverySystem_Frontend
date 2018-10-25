@@ -12,6 +12,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgSemanticModule } from 'ng-semantic';
 import { ParcelsTableComponent } from './dumb/parcels-table/parcels-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ParcelCardComponent } from './dumb/parcel-card/parcel-card.component';
 import { MaterialModule } from '../material-module';
 
 @NgModule({
@@ -35,14 +36,16 @@ import { MaterialModule } from '../material-module';
     DriverCardComponent,
     NavigationComponent,
     WorkCalendarComponent,
-    ParcelsTableComponent
+    ParcelsTableComponent,
+    ParcelCardComponent
   ],
   exports: [
     DeliveryMapComponent,
     DriverCardComponent,
     NavigationComponent,
     WorkCalendarComponent,
-    ParcelsTableComponent
+    ParcelsTableComponent,
+    ParcelCardComponent
   ]
 })
 export class SharedModule {}

@@ -1,0 +1,24 @@
+.map {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+
+.parcel-info {
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+
+.ag-map {
+  width: 100%;
+  height: 400px;
+}
+
+.card-content:hover {
+  background: #f4f4f4;
+  cursor: pointer;
+  border-radius: 5px;
+}
+

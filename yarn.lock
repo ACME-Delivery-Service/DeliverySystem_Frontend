@@ -209,7 +209,7 @@
   integrity sha512-OGdDtpu/yRioOQXhJFCNuiOF2OgiL9VUj8ewFPi1lDtFGUFfVwU2h3hWkKLn+yuPW+DBVYla11tCNsn5dLElmA==
   dependencies:
     tslib "^1.7.1"
-
+    
 "@angular/material@^7.0.1":
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.0.1.tgz#51ddbc1ae7ed41926fd8a0cbba0f7565ee8fda2d"
