@@ -9,6 +9,9 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './components/shared.module';
+import { BackendService } from './services/backend.service';
+import { ApiService } from './services/api.service';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -29,8 +32,8 @@ import { SharedModule } from './components/shared.module';
     PagesModule,
     SharedModule,
   ],
+  providers: [BackendService, ApiService, AuthService],
   exports: [],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
