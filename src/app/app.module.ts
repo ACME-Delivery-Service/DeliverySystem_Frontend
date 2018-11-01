@@ -13,6 +13,8 @@ import { BackendService } from './services/backend.service';
 import { ApiService } from './services/api.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './guards/auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +32,17 @@ import { AuthGuardService } from './guards/auth.guard';
     PagesModule,
     SharedModule
   ],
-  providers: [BackendService, ApiService, AuthService, AuthGuardService],
+  providers: [
+    BackendService,
+    ApiService,
+    AuthService,
+    AuthGuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   exports: [],
   bootstrap: [AppComponent]
 })

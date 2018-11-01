@@ -21,4 +21,8 @@ export class AuthService {
 
     return !!token;
   }
+
+  public getToken(): string {
+    return localStorage.getItem('currentUser');
+  }
 }
