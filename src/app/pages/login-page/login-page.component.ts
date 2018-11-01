@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
 import { ApiService } from '../../services/api.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -8,11 +9,9 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  constructor(private backend: BackendService,
-              private api: ApiService) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit() {
-    this.backend.login(this.api.login);
+    this.authService.authorize('j.doe@innopolis.ru', '12345678');
   }
-
 }
