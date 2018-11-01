@@ -9,9 +9,12 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './components/shared.module';
-
-
-
+import { BackendService } from './services/backend.service';
+import { ApiService } from './services/api.service';
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './guards/auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,10 +30,20 @@ import { SharedModule } from './components/shared.module';
     AppRoutingModule,
     ReactiveFormsModule,
     PagesModule,
-    SharedModule,
+    SharedModule
+  ],
+  providers: [
+    BackendService,
+    ApiService,
+    AuthService,
+    AuthGuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   exports: [],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

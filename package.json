@@ -1,10 +1,13 @@
 {
-  "name": "ng-data-form",
-  "version": "0.0.0",
+  "name": "ACME-Delivery",
+  "version": "0.0.2",
+  "options": {
+    "browserTarget": "ACME-Delivery:build",
+    "proxyConfig": "proxy.conf.json"
+  },
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --proxy-config proxy.conf.json",
+    "build": "ng build --proxy-config proxy.conf.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

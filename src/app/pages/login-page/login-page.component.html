@@ -3,28 +3,29 @@
   <div class="container">
     <div class="row">
       <div class="card card-signup" data-background-color="orange">
-        <form class="form" method="" action="">
           <div class="header text-center">
             <h4 class="title title-up">Login</h4>
           </div>
+          <form [formGroup]="loginForm">
           <div class="card-body">
             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
               <div class="input-group-prepend">
                 <span class="input-group-text">  <i class="now-ui-icons users_circle-08"></i></span>
               </div>
-              <input type="text" class="form-control" placeholder="Login" (focus)="focus=true" (blur)="focus=false" >
+              <input formControlName="login" type="text" class="form-control" placeholder="Login" (focus)="focus=true" (blur)="focus=false" >
             </div>
             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="now-ui-icons text_caps-small"></i></span>
               </div>
-              <input type="password" placeholder="Password" class="form-control" (focus)="focus1=true" (blur)="focus1=false"/>
+              <input formControlName="password" type="password" placeholder="Password" class="form-control" (focus)="focus1=true" (blur)="focus1=false"/>
             </div>
           </div>
+          </form>
+        <div *ngIf="error">{{ error }}</div>
           <div class="footer text-center">
-            <a [routerLink]="['/index/']" href="#pablo" class="btn btn-neutral btn-round btn-lg">Get Started</a>
+            <button (click)="submitForm()" href="#pablo" class="btn btn-neutral btn-round btn-lg">Get Started</button>
           </div>
-        </form>
       </div>
     </div>
   </div>
