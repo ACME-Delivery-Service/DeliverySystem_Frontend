@@ -12,9 +12,7 @@ import { SharedModule } from './components/shared.module';
 import { BackendService } from './services/backend.service';
 import { ApiService } from './services/api.service';
 import { AuthService } from './services/auth.service';
-
-
-
+import { AuthGuardService } from './guards/auth.guard';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,9 +28,9 @@ import { AuthService } from './services/auth.service';
     AppRoutingModule,
     ReactiveFormsModule,
     PagesModule,
-    SharedModule,
+    SharedModule
   ],
-  providers: [BackendService, ApiService, AuthService],
+  providers: [BackendService, ApiService, AuthService, AuthGuardService],
   exports: [],
   bootstrap: [AppComponent]
 })

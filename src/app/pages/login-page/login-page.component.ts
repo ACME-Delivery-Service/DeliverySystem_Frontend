@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
 import { ApiService } from '../../services/api.service';
 import { AuthService } from '../../services/auth.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -9,9 +11,27 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  constructor(private authService: AuthService) {}
+  public loginForm = new FormGroup({
+    login: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  });
+
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
-    this.authService.authorize('j.doe@innopolis.ru', '12345678');
+    this.checkIfAuthenticated();
+  }
+  public submitForm(): void {
+    if (this.loginForm.valid) {
+      const cridentials = this.loginForm.value;
+      this.authService.authenticate(cridentials['login'], cridentials['password']);
+      this.checkIfAuthenticated();
+    }
+  }
+
+  private checkIfAuthenticated(): void {
+    if (this.authService.isAuthenticated()) {
+      this.router.navigate(['index']);
+    }
   }
 }

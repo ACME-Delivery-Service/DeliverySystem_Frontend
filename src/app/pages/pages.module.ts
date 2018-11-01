@@ -9,10 +9,11 @@ import { BackendService } from '../services/backend.service';
 import { AuthService } from '../services/auth.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [LoginPageComponent, ParcelsPageComponent],
-  imports: [CommonModule, RouterModule, SharedModule, HttpClientModule],
-  providers: [BackendService, ApiService, AuthService],
+  imports: [CommonModule, RouterModule, SharedModule, HttpClientModule, ReactiveFormsModule],
+  providers: [BackendService, ApiService, AuthService]
 })
 export class PagesModule {}

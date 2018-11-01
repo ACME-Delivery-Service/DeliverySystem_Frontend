@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ParcelsPageComponent } from './pages/parsels-page/parsels-page.component';
+import { AuthGuardService } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
-  { path: 'index', component: ParcelsPageComponent },
+  { path: 'index', component: ParcelsPageComponent, canActivate: [AuthGuardService] },
   { path: 'login', component: LoginPageComponent }
 ];
 
