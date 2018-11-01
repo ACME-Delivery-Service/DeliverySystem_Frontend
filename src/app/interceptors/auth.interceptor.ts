@@ -9,7 +9,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (this.authService.isAuthenticated()) {
-      req.headers.append('Authorization: ', 'token: ' + this.authService.getToken());
+      req.headers.append('Authorization', 'token: ' + this.authService.getToken());
     }
     return next.handle(req);
   }
