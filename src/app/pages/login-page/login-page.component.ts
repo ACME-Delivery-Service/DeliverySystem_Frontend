@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BackendService } from '../../services/backend.service';
-import { ApiService } from '../../services/api.service';
 import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login-page',
@@ -15,6 +14,7 @@ export class LoginPageComponent implements OnInit {
     login: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });
+  public error: string;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -24,7 +24,9 @@ export class LoginPageComponent implements OnInit {
   public submitForm(): void {
     if (this.loginForm.valid) {
       const cridentials = this.loginForm.value;
-      this.authService.authenticate(cridentials['login'], cridentials['password']);
+      this.authService
+        .authenticate(cridentials['login'], cridentials['password'])
+        .subscribe(() => this.router.navigate(['index']), (err: HttpErrorResponse) => (this.error = err.error.msg));
       this.checkIfAuthenticated();
     }
   }
