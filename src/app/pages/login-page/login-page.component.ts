@@ -3,6 +3,9 @@ import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
+import { LoaderService } from '../../services/loader.service';
+import { LoaderState } from '../../interfaces/loader';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-login-page',
@@ -16,10 +19,18 @@ export class LoginPageComponent implements OnInit {
   });
   public error: string;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  loading: boolean;
+  private subscription: Subscription;
+
+  constructor(private authService: AuthService, private loaderService: LoaderService, private router: Router) {}
 
   ngOnInit() {
     this.checkIfAuthenticated();
+    this.loading = false;
+    this.subscription = this.loaderService.loaderState
+      .subscribe((state: LoaderState) => {
+        this.loading = state.show;
+      });
   }
   public submitForm(): void {
     if (this.loginForm.valid) {
