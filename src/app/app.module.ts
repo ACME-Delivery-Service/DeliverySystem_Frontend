@@ -49,7 +49,7 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
       useClass: LoaderInterceptor,
       multi: true
     },
-    LoaderService,
+    LoaderService
   ],
   exports: [],
   bootstrap: [AppComponent]
