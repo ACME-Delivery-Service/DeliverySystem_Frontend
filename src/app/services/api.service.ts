@@ -7,4 +7,8 @@ export class ApiService {
   public get login() {
     return `${this.baseUrl}/account/login`;
   }
+
+  public get getUserInfo() {
+    return `${this.baseUrl}/account/info`;
+  }
 }

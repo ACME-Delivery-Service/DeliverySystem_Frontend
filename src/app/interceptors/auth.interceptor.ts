@@ -8,10 +8,13 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    let headers = req.headers;
     if (this.authService.isAuthenticated()) {
-      req.headers.append('Authorization', 'token: ' + this.authService.getToken());
-      console.warn('added header!');
+      headers = headers.append('Authorization', 'token ' + this.authService.getToken());
+      // console.warn('added header!');
+      // console.warn('token ' + this.authService.getToken());
     }
+    console.warn(headers);
     return next.handle(req);
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../../services/user.service';
+
 
 @Component({
   selector: 'app-navigation',
@@ -6,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.userService.getUserInfo();
+  }
 }
