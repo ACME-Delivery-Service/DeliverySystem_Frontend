@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BackendService } from './backend.service';
 import { ApiService } from './api.service';
 import { catchError, filter, map } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
 import { UserInterface } from '../interfaces/user-interface';
 
@@ -10,10 +10,7 @@ import { UserInterface } from '../interfaces/user-interface';
 export class UserService {
   constructor(private backend: BackendService, private api: ApiService) {}
 
-  public getUserInfo(): void {
-    this.backend
-      .getUserInfo(this.api.getUserInfo)
-      .pipe(map((res: HttpResponse<UserInterface>) => res.body))
-      .subscribe((a: UserInterface) => console.warn(a));
+  public getUserInfo(): Observable<any> {
+    return this.backend.getUserInfo(this.api.getUserInfo).pipe(map((res: HttpResponse<UserInterface>) => res.body));
   }
 }

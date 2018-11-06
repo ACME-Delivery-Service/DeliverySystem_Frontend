@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../interfaces/parcel-interface';
 import { OperatorInterface } from '../../interfaces/operator-interface';
 import { UserService } from '../../services/user.service';
+import { UserInterface } from '../../interfaces/user-interface';
 
 @Component({
   selector: 'app-parcels-page',
@@ -11,11 +12,10 @@ import { UserService } from '../../services/user.service';
 export class ParcelsPageComponent implements OnInit {
   public parcels: ParcelInterface[];
 
-  constructor( private userService: UserService) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
-
-    this.userService.getUserInfo();
+    this.userService.getUserInfo().subscribe(a => console.warn(a));
 
     const operator1: OperatorInterface = {
       photo: 'assets/img/ryan.jpg',

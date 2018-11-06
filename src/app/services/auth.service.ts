@@ -7,8 +7,7 @@ import { HttpResponse } from '@angular/common/http';
 
 @Injectable()
 export class AuthService {
-  constructor(private backend: BackendService, private api: ApiService) {
-  }
+  constructor(private backend: BackendService, private api: ApiService) {}
 
   public authenticate(email: string, password: string): Observable<HttpResponse<any>> {
     return this.backend.login(this.api.login, email, password).pipe(
