@@ -9,6 +9,7 @@
   display: inline-block;
   width: 50%;
   float: left;
+  padding-right: 20px;
 }
 
 .ag-map {
@@ -22,3 +23,6 @@
   border-radius: 5px;
 }
 
+.titles{
+  font-weight: bold;
+}
