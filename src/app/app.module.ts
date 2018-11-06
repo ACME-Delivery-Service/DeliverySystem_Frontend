@@ -13,6 +13,7 @@ import { BackendService } from './services/backend.service';
 import { ApiService } from './services/api.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './guards/auth.guard';
+import { UserService } from './services/user.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { LoaderService } from './services/loader.service';
@@ -39,6 +40,7 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
     ApiService,
     AuthService,
     AuthGuardService,
+    UserService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

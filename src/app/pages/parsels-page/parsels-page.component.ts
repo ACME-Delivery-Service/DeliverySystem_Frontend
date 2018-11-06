@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../interfaces/parcel-interface';
 import { OperatorInterface } from '../../interfaces/operator-interface';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-parcels-page',
@@ -10,9 +11,10 @@ import { OperatorInterface } from '../../interfaces/operator-interface';
 export class ParcelsPageComponent implements OnInit {
   public parcels: ParcelInterface[];
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
+
     const operator1: OperatorInterface = {
       photo: 'assets/img/ryan.jpg',
       name: 'John Vorbob',

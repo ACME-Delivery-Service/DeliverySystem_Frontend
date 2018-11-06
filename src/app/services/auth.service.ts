@@ -12,7 +12,7 @@ export class AuthService {
   public authenticate(email: string, password: string): Observable<HttpResponse<any>> {
     return this.backend.login(this.api.login, email, password).pipe(
       filter(token => !!token),
-      tap(token => localStorage.setItem('currentUser', JSON.stringify(token['token'])))
+      tap(token => localStorage.setItem('currentUser', token['token']))
     );
   }
 
