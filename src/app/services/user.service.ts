@@ -11,6 +11,6 @@ export class UserService {
   constructor(private backend: BackendService, private api: ApiService) {}
 
   public getUserInfo(): Observable<any> {
-    return this.backend.getUserInfo(this.api.getUserInfo).pipe(map((res: HttpResponse<UserInterface>) => res.body));
+    return this.backend.getUserInfo(this.api.getUserInfo);
   }
 }
