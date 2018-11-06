@@ -10,7 +10,7 @@ import { UserInterface } from '../interfaces/user-interface';
 export class UserService {
   constructor(private backend: BackendService, private api: ApiService) {}
 
-  public getUserInfo(): Observable<any> {
+  public getUserInfo(): Observable<UserInterface> {
     return this.backend.getUserInfo(this.api.getUserInfo);
   }
 }

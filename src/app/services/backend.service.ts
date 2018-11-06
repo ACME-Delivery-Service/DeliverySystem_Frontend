@@ -12,7 +12,7 @@ export class BackendService {
     return this.http.post<HttpResponse<string>>(address, { email, password });
   }
 
-  public getUserInfo(address: string): Observable<HttpResponse<UserInterface>> {
-    return this.http.get<HttpResponse<UserInterface>>(address, {});
+  public getUserInfo(address: string): Observable<UserInterface> {
+    return this.http.get<UserInterface>(address, {});
   }
 }

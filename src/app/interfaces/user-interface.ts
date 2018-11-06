@@ -1,8 +1,9 @@
-import { ContactInterface } from './contact-interface';
+import { ContactsInterface } from './contacts-interface';
 
 export interface UserInterface {
   id: number;
   location: string;
   email: string;
-  contact: ContactInterface;
+  avatar_url: string;
+  contacts: ContactsInterface;
 }

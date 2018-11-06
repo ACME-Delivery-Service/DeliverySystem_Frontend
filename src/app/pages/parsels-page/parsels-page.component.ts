@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../interfaces/parcel-interface';
 import { OperatorInterface } from '../../interfaces/operator-interface';
 import { UserService } from '../../services/user.service';
-import { UserInterface } from '../../interfaces/user-interface';
 
 @Component({
   selector: 'app-parcels-page',
@@ -15,7 +14,6 @@ export class ParcelsPageComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.userService.getUserInfo().subscribe(a => console.warn(a));
 
     const operator1: OperatorInterface = {
       photo: 'assets/img/ryan.jpg',
