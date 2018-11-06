@@ -3,6 +3,10 @@ import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
+import { LoaderService } from '../../services/loader.service';
+import { LoaderState } from '../../interfaces/loader';
+import { Subscription } from 'rxjs';
+import { MatSnackBar, MatSnackBarHorizontalPosition } from '@angular/material';
 
 @Component({
   selector: 'app-login-page',
@@ -14,19 +18,33 @@ export class LoginPageComponent implements OnInit {
     login: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });
-  public error: string;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  loading: boolean;
+  private subscription: Subscription;
+
+  constructor(
+    private authService: AuthService,
+    private loaderService: LoaderService,
+    private router: Router,
+    public snackBar: MatSnackBar
+  ) {}
 
   ngOnInit() {
     this.checkIfAuthenticated();
+    this.loading = false;
+    this.subscription = this.loaderService.loaderState.subscribe((state: LoaderState) => {
+      this.loading = state.show;
+    });
   }
   public submitForm(): void {
     if (this.loginForm.valid) {
       const cridentials = this.loginForm.value;
-      this.authService
-        .authenticate(cridentials['login'], cridentials['password'])
-        .subscribe(() => this.router.navigate(['index']), (err: HttpErrorResponse) => (this.error = err.error.msg));
+      this.authService.authenticate(cridentials['login'], cridentials['password']).subscribe(
+        () => this.router.navigate(['index']),
+        (err: HttpErrorResponse) => {
+          this.snackBar.open(err.error.msg, null, { duration: 3000 });
+        }
+      );
       this.checkIfAuthenticated();
     }
   }

@@ -1,5 +1,5 @@
 <div class="section section-signup" style="background-image: url('../../assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
-  <img src='https://preview.ibb.co/kK8k19/company_logo.png' class="logotip">
+  <img src='https://preview.ibb.co/kK8k19/company_logo.png' [ngClass]="(loading)?'logotip-d':'logotip-s'">
   <div class="container">
     <div class="row">
       <div class="card card-signup" data-background-color="orange">
@@ -22,7 +22,6 @@
             </div>
           </div>
           </form>
-        <div *ngIf="error">{{ error }}</div>
           <div class="footer text-center">
             <button (click)="submitForm()" href="#pablo" class="btn btn-neutral btn-round btn-lg">Get Started</button>
           </div>
@@ -30,3 +29,4 @@
     </div>
   </div>
 </div>
+<div class="bottom"></div>
