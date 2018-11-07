@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse, HttpResponseBase } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { UserInterface } from '../interfaces/user-interface';
+import { OrdersListInterface } from '../interfaces/orders-list-interface';
 
 @Injectable()
 export class BackendService {
@@ -14,5 +15,9 @@ export class BackendService {
 
   public getUserInfo(address: string): Observable<UserInterface> {
     return this.http.get<UserInterface>(address, {});
+  }
+
+  public getOrdersList(address: string): Observable<OrdersListInterface> {
+    return this.http.get<OrdersListInterface>(address, {});
   }
 }

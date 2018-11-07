@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../../interfaces/parcel-interface';
 import { FormControl, FormGroup } from '@angular/forms';
+import { OrdersListService } from '../../../services/orders-list.service';
+import { OrdersListInterface } from '../../../interfaces/orders-list-interface';
 
 @Component({
   selector: 'app-parcels-table',
@@ -14,8 +16,15 @@ export class ParcelsTableComponent implements OnInit {
   public formGroup: FormGroup;
   public availableStatuses: string[] = ['OK', 'DELAY'];
   public filteredParcels;
+  public ordersList: OrdersListInterface;
 
-  constructor() {}
+  constructor(private ordersListService: OrdersListService) {
+    this.ordersListService.getOrdersList().subscribe((orders: OrdersListInterface) => {
+        this.ordersList = orders;
+        console.warn(orders);
+      }
+    );
+  }
 
   ngOnInit() {
     this.formGroup = new FormGroup({

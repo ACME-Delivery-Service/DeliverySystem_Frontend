@@ -11,4 +11,9 @@ export class ApiService {
   public get getUserInfo() {
     return `${this.baseUrl}/account/info`;
   }
+
+  public get getOrdersList() {
+    return `${this.baseUrl}/orders/list`;
+  }
+
 }
