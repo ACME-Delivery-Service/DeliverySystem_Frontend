@@ -13,19 +13,19 @@ export class DeliveryMapComponent {
 
   drivers = [
     {
-      photo: 'assets/img/ryan.jpg',
+      avatar: 'assets/img/ryan.jpg',
       name: 'John Vorbob',
       status: 'Occupied',
       id: 12
     },
     {
-      photo: 'assets/img/elijah.png',
+      avatar: 'assets/img/elijah.png',
       name: 'Elijah Deliverer',
       status: 'Occupied',
       id: 123
     },
     {
-      photo: 'assets/img/eva.jpg',
+      avatar: 'assets/img/eva.jpg',
       name: 'Eva Qutie',
       status: 'Occupied',
       id: 1234
