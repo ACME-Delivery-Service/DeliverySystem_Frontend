@@ -18,6 +18,7 @@ export class ParcelsPageComponent implements OnInit {
     const operator1: OperatorInterface = {
       photo: 'assets/img/ryan.jpg',
       name: 'John Vorbob',
+      contacts: null,
       status: 'Occupied',
       id: 12
     };
@@ -26,6 +27,7 @@ export class ParcelsPageComponent implements OnInit {
       photo: 'assets/img/elijah.png',
       name: 'Elijah Deliverer',
       status: 'Occupied',
+      contacts: null,
       id: 123
     };
 
@@ -33,6 +35,7 @@ export class ParcelsPageComponent implements OnInit {
       photo: 'assets/img/eva.jpg',
       name: 'Eva Qutie',
       status: 'Occupied',
+      contacts: null,
       id: 1234
     };
 
