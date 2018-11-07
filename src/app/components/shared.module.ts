@@ -14,6 +14,7 @@ import { ParcelsTableComponent } from './dumb/parcels-table/parcels-table.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { ParcelCardComponent } from './dumb/parcel-card/parcel-card.component';
 import { MaterialModule } from '../material-module';
+import { DialerComponent } from './dumb/dialer/dialer.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import { MaterialModule } from '../material-module';
     MatDatepickerModule,
     MaterialModule,
     NgSemanticModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     DeliveryMapComponent,
@@ -37,7 +38,8 @@ import { MaterialModule } from '../material-module';
     NavigationComponent,
     WorkCalendarComponent,
     ParcelsTableComponent,
-    ParcelCardComponent
+    ParcelCardComponent,
+    DialerComponent
   ],
   exports: [
     DeliveryMapComponent,
@@ -45,7 +47,8 @@ import { MaterialModule } from '../material-module';
     NavigationComponent,
     WorkCalendarComponent,
     ParcelsTableComponent,
-    ParcelCardComponent
+    ParcelCardComponent,
+    DialerComponent
   ]
 })
 export class SharedModule {}

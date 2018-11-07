@@ -4,7 +4,6 @@ import { LocationInterface } from './location-interface';
 export interface OperatorInterface {
   avatar: string;
   id: number;
-  name: string;
   contacts: ContactsInterface;
   status: string;
   location: LocationInterface;

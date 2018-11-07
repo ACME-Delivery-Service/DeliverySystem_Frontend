@@ -1,4 +1,4 @@
-import {LocationInterface} from './location-interface';
+import { LocationInterface } from './location-interface';
 
 export interface AddressInterface {
   address: string;

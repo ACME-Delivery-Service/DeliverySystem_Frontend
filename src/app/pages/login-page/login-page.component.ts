@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl('', Validators.required)
   });
 
-  loading: boolean;
+  public loading: boolean;
   private subscription: Subscription;
 
   constructor(

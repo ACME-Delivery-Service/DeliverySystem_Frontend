@@ -11,20 +11,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-
   public userInfo: UserInterface;
 
   constructor(private userService: UserService, private authService: AuthService, private router: Router) {
-    this.userService.getUserInfo().pipe(filter((value: UserInterface) => !!value)).subscribe(
-      (userInfo: UserInterface) => {
+    this.userService
+      .getUserInfo()
+      .pipe(filter((value: UserInterface) => !!value))
+      .subscribe((userInfo: UserInterface) => {
         this.userInfo = userInfo;
-      }
-    );
+      });
   }
 
   public logout() {
     this.authService.logout();
     this.router.navigate(['login']);
   }
-
 }

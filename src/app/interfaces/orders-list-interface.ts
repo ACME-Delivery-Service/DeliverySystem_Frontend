@@ -1,4 +1,4 @@
-import {ParcelInterface} from './parcel-interface';
+import { ParcelInterface } from './parcel-interface';
 
 export interface OrdersListInterface {
   total_count: number;
