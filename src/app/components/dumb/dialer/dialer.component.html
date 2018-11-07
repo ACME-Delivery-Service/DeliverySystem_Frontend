@@ -1,0 +1,16 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<mat-card *ngIf="operatorInfo" class="dialer">
+  <div class="container">
+    <img src="{{operatorInfo.avatar}}" class="image">
+  </div>
+  <h5 class="name">{{operatorInfo.contacts.first_name}} {{operatorInfo.contacts.last_name}}</h5>
+  <h5 class="calling">calling... {{operatorInfo.contacts.phone_number}}</h5>
+  <div class="placeholder"></div>
+  <button mat-fab color="warn" class="stop-call" (click)="stopCall()">
+    <mat-icon aria-label="Example icon-button with a heart icon" >clear</mat-icon>
+  </button>
+</mat-card>
+
+
+

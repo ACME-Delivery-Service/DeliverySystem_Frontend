@@ -20,10 +20,9 @@ export class ParcelsTableComponent implements OnInit {
 
   constructor(private ordersListService: OrdersListService) {
     this.ordersListService.getOrdersList().subscribe((orders: OrdersListInterface) => {
-        this.ordersList = orders;
-        console.warn(orders);
-      }
-    );
+      this.ordersList = orders;
+      console.warn(orders);
+    });
   }
 
   ngOnInit() {
@@ -62,7 +61,7 @@ export class ParcelsTableComponent implements OnInit {
 
     if (!!filteredOperator) {
       this.filteredParcels = this.filteredParcels.filter(({ operator }: ParcelInterface) =>
-        operator.name.startsWith(filteredOperator)
+        operator.contacts.last_name.startsWith(filteredOperator)
       );
     }
 

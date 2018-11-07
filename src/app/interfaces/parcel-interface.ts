@@ -1,5 +1,5 @@
 import { OperatorInterface } from './operator-interface';
-import {AddressInterface} from './address-interface';
+import { AddressInterface } from './address-interface';
 
 export class ParcelInterface {
   id: number;
@@ -12,4 +12,3 @@ export class ParcelInterface {
   status: string;
   operator: OperatorInterface;
 }
-

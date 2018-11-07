@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { OperatorInterface } from '../../../interfaces/operator-interface';
+import { DialerService } from '../../../services/dialer.service';
 
 @Component({
   selector: 'app-driver-card',
@@ -17,7 +18,12 @@ export class DriverCardComponent implements OnInit {
   lat = 55.752134;
   lng = 48.744498;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private dialerService: DialerService) {}
+
+  call() {
+    console.log('calling');
+    this.dialerService.call(this.driver);
+  }
 
   open(content) {
     this.modalReference = this.modalService.open(content, { size: 'lg' });

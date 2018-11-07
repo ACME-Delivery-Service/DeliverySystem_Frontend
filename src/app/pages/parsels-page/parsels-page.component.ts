@@ -14,11 +14,17 @@ export class ParcelsPageComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-
     const operator1: OperatorInterface = {
-      avatar: 'assets/img/elijah.png',
-      name: 'John Vorbob',
-      contacts: null,
+      avatar: 'assets/img/mike.jpg',
+      contacts: {
+        address: null,
+        phone_number: '+7912492904',
+        additional_info: null,
+        first_name: 'John',
+        last_name: 'Vorbob',
+        position: null,
+        company: null
+      },
       location: null,
       status: 'Occupied',
       location_update_time: null,
@@ -27,9 +33,16 @@ export class ParcelsPageComponent implements OnInit {
 
     const operator2: OperatorInterface = {
       avatar: 'assets/img/elijah.png',
-      name: 'Elijah Deliverer',
       status: 'Occupied',
-      contacts: null,
+      contacts: {
+        address: null,
+        phone_number: '+7912492904',
+        additional_info: null,
+        first_name: 'Elijah',
+        last_name: 'Deliverer',
+        position: null,
+        company: null
+      },
       location: null,
       location_update_time: null,
       id: 123
@@ -37,9 +50,16 @@ export class ParcelsPageComponent implements OnInit {
 
     const operator3: OperatorInterface = {
       avatar: 'assets/img/eva.jpg',
-      name: 'Eva Qutie',
       status: 'Occupied',
-      contacts: null,
+      contacts: {
+        address: null,
+        phone_number: '+7912492904',
+        additional_info: null,
+        first_name: 'Eva',
+        last_name: 'Qutie',
+        position: null,
+        company: null
+      },
       location: null,
       location_update_time: null,
       id: 1234

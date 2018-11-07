@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParcelsPageComponent } from './parsels-page.component';
+import { DialerComponent } from './dialer.component';
 
-describe('ParselsListComponent', () => {
-  let component: ParcelsPageComponent;
-  let fixture: ComponentFixture<ParcelsPageComponent>;
+describe('DialerComponent', () => {
+  let component: DialerComponent;
+  let fixture: ComponentFixture<DialerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ParcelsPageComponent]
+      declarations: [DialerComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ParcelsPageComponent);
+    fixture = TestBed.createComponent(DialerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
