@@ -55,8 +55,8 @@ export class ParcelsTableComponent implements OnInit {
     }
 
     if (!!filteredDate) {
-      this.filteredParcels = this.filteredParcels.filter(({ arrivalDate }: ParcelInterface) =>
-        arrivalDate.startsWith(filteredDate)
+      this.filteredParcels = this.filteredParcels.filter(({ delivery_period }: ParcelInterface) =>
+        delivery_period.end.startsWith(filteredDate)
       );
     }
 
@@ -67,8 +67,8 @@ export class ParcelsTableComponent implements OnInit {
     }
 
     if (!!filteredStatus) {
-      this.filteredParcels = this.filteredParcels.filter(({ status }: ParcelInterface) =>
-        status.toString().startsWith(filteredStatus)
+      this.filteredParcels = this.filteredParcels.filter(({ delivery_status }: ParcelInterface) =>
+        delivery_status.toString().startsWith(filteredStatus)
       );
     }
   }

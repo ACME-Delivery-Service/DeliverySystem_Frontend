@@ -47,57 +47,89 @@ export class ParcelsPageComponent implements OnInit {
 
     const parcel1: ParcelInterface = {
       id: 16209,
-      arrivalDate: '11.10.2018 15:30',
-      status: 'OK',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status:  'OK',
       operator: operator1
     };
 
     const parcel2: ParcelInterface = {
       id: 16876,
-      arrivalDate: '11.10.2018 18:45',
-      status: 'DELAY',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status: 'DELAY',
       operator: operator3
     };
 
     const parcel3: ParcelInterface = {
       id: 16098,
-      arrivalDate: '12.10.2018 09:15',
-      status: 'OK',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status: 'OK',
       operator: operator2
     };
 
     const parcel4: ParcelInterface = {
       id: 16020,
-      arrivalDate: '12.10.2018 19:35',
-      status: 'DELAY',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status: 'DELAY',
       operator: operator1
     };
 
     const parcel5: ParcelInterface = {
       id: 16735,
-      arrivalDate: '13.10.2018 18:10',
-      status: 'OK',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status: 'OK',
       operator: operator2
     };
 
     const parcel6: ParcelInterface = {
       id: 17592,
-      arrivalDate: '13.10.2018 17:50',
-      status: 'OK',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status: 'OK',
       operator: operator2
     };
 
     const parcel7: ParcelInterface = {
       id: 16027,
-      arrivalDate: '13.10.2018 19:30',
-      status: 'DELAY',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status: 'DELAY',
       operator: operator3
     };
 
     const parcel8: ParcelInterface = {
       id: 16022,
-      arrivalDate: '13.10.2018 19:35',
-      status: 'DELAY',
+      delivery_period: null,
+      priority: null,
+      adressTo: null,
+      addressFrom: null,
+      isAssigned: true,
+      delivery_status: 'DELAY',
       operator: operator1
     };
 
