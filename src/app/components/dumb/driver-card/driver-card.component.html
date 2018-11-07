@@ -7,7 +7,7 @@
   </div>
   <div class="modal-body">
     <div class="custom-card">
-      <img src="{{ driver.photo }}" alt="Circle Image" class="rounded-circle card-element"
+      <img src="{{ driver.avatar}}" alt="Circle Image" class="rounded-circle card-element"
            style="height: 100px">
       <div class="card-element">
         <div class="name padder" style="font-size: 30px"> {{ driver.name }}</div>
@@ -191,7 +191,7 @@
 
 <div class="custom-card">
   <div (click)="open(content)" class="card-content">
-    <img src="{{ driver.photo }}" alt="Circle Image" class="rounded-circle card-element"
+    <img src="{{ driver.avatar }}" alt="Circle Image" class="rounded-circle card-element"
         style="height: 30px">
     <div class="name mini-padder card-element"> {{ driver.name }}</div>
   </div>

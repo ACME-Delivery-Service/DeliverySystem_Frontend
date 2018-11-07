@@ -16,26 +16,32 @@ export class ParcelsPageComponent implements OnInit {
   ngOnInit() {
 
     const operator1: OperatorInterface = {
-      photo: 'assets/img/ryan.jpg',
+      avatar: 'assets/img/elijah.png',
       name: 'John Vorbob',
       contacts: null,
+      location: null,
       status: 'Occupied',
+      location_update_time: null,
       id: 12
     };
 
     const operator2: OperatorInterface = {
-      photo: 'assets/img/elijah.png',
+      avatar: 'assets/img/elijah.png',
       name: 'Elijah Deliverer',
       status: 'Occupied',
       contacts: null,
+      location: null,
+      location_update_time: null,
       id: 123
     };
 
     const operator3: OperatorInterface = {
-      photo: 'assets/img/eva.jpg',
+      avatar: 'assets/img/eva.jpg',
       name: 'Eva Qutie',
       status: 'Occupied',
       contacts: null,
+      location: null,
+      location_update_time: null,
       id: 1234
     };
 
