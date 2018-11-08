@@ -13,7 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
         ...req.headers,
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
-          'Authorization': `token ${this.authService.getToken()}`
+          Authorization: `token ${this.authService.getToken()}`
         })
       });
 

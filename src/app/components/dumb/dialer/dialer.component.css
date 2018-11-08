@@ -1,0 +1,37 @@
+.dialer {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}
+.image {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.name {
+  margin: 10px 0 10px 0;
+  text-align: center
+}
+
+.calling {
+  margin: 10px 0 10px 0;
+  text-align: center;
+  font-size: 1em;
+}
+
+.placeholder {
+  height: 80px;
+}
+
+.stop-call {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+

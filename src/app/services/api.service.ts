@@ -15,5 +15,4 @@ export class ApiService {
   public get getOrdersList() {
     return `${this.baseUrl}/order/list`;
   }
-
 }

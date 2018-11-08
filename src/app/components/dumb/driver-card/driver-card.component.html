@@ -10,7 +10,7 @@
       <img src="{{ driver.avatar}}" alt="Circle Image" class="rounded-circle card-element"
            style="height: 100px">
       <div class="card-element">
-        <div class="name padder" style="font-size: 30px"> {{ driver.name }}</div>
+        <div class="name padder" style="font-size: 30px"> {{driver.contacts.first_name}} {{driver.contacts.last_name}}</div>
         <div class="padder driver-status"> {{ driver.status }}</div>
         <div class="last-update padder">Last updated: {{driver.location_update_time}}</div>
       </div>
@@ -194,8 +194,8 @@
   <div (click)="open(content)" class="card-content">
     <img src="{{ driver.avatar }}" alt="Circle Image" class="rounded-circle card-element"
         style="height: 30px">
-    <div class="name mini-padder card-element"> {{ driver.name }}</div>
+    <div class="name mini-padder card-element"> {{driver.contacts.first_name}} {{driver.contacts.last_name}}</div>
   </div>
-  <button type="button" class="btn btn-success card-element" style="float: right">Call</button>
+  <button type="button" class="btn btn-success card-element" style="float: right" (click)="call()">Call</button>
 </div>
 

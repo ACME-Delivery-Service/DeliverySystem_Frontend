@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -6,7 +6,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { LoaderService } from '../../services/loader.service';
 import { LoaderState } from '../../interfaces/loader';
 import { Subscription } from 'rxjs';
-import { MatSnackBar, MatSnackBarHorizontalPosition } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-login-page',
@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl('', Validators.required)
   });
 
-  loading: boolean;
+  public loading: boolean;
   private subscription: Subscription;
 
   constructor(
@@ -46,6 +46,13 @@ export class LoginPageComponent implements OnInit {
         }
       );
       this.checkIfAuthenticated();
+    }
+  }
+
+  @HostListener('document:keypress', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.submitForm();
     }
   }
 

@@ -14,5 +14,3 @@ export class ParcelInterface {
   status: string;
   delivery_operator: OperatorInterface;
 }
-
-

@@ -9,13 +9,11 @@ import { OrdersListService } from '../../services/orders-list.service';
   styleUrls: ['./parcels-page.component.css']
 })
 export class ParcelsPageComponent implements OnInit {
-
   public parcels: ParcelInterface[];
 
   constructor(private ordersListService: OrdersListService) {
     this.ordersListService.getOrdersList().subscribe((orders: OrdersListInterface) => {
         this.parcels = orders.results;
-        console.warn(orders);
       }
     );
   }

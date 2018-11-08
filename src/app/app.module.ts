@@ -19,6 +19,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { OrdersListService } from './services/orders-list.service';
+import { DialerService } from './services/dialer.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,6 +43,7 @@ import { OrdersListService } from './services/orders-list.service';
     AuthService,
     AuthGuardService,
     UserService,
+    DialerService,
     OrdersListService,
     {
       provide: HTTP_INTERCEPTORS,
