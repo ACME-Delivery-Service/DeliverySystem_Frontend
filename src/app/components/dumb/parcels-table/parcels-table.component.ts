@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../../interfaces/parcel-interface';
 import { FormControl, FormGroup } from '@angular/forms';
+import { OrdersListInterface } from '../../../interfaces/orders-list-interface';
+import { OrdersListService } from '../../../services/orders-list.service';
+
 
 @Component({
   selector: 'app-parcels-table',
@@ -59,7 +62,7 @@ export class ParcelsTableComponent implements OnInit {
 
     if (!!filteredOperator) {
       this.filteredParcels = this.filteredParcels.filter(({ delivery_operator }: ParcelInterface) =>
-        delivery_operator.name.startsWith(filteredOperator)
+        delivery_operator.contacts.first_name.startsWith(filteredOperator)
 
       );
     }
