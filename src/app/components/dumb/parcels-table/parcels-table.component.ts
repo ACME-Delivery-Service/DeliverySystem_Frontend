@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../../interfaces/parcel-interface';
 import { FormControl, FormGroup } from '@angular/forms';
-import { OrdersListService } from '../../../services/orders-list.service';
-import { OrdersListInterface } from '../../../interfaces/orders-list-interface';
 
 @Component({
   selector: 'app-parcels-table',
@@ -14,7 +12,7 @@ export class ParcelsTableComponent implements OnInit {
   parcels: ParcelInterface[];
 
   public formGroup: FormGroup;
-  public availableStatuses: string[] = ['OK', 'DELAY'];
+  public availableStatuses: string[] = ['created', 'approved', 'en_route', 'stored', 'delivered'];
   public filteredParcels;
   public ordersList: OrdersListInterface;
 
@@ -54,14 +52,15 @@ export class ParcelsTableComponent implements OnInit {
     }
 
     if (!!filteredDate) {
-      this.filteredParcels = this.filteredParcels.filter(({ arrivalDate }: ParcelInterface) =>
-        arrivalDate.startsWith(filteredDate)
+      this.filteredParcels = this.filteredParcels.filter(({ delivery_period }: ParcelInterface) =>
+        delivery_period.end.startsWith(filteredDate)
       );
     }
 
     if (!!filteredOperator) {
-      this.filteredParcels = this.filteredParcels.filter(({ operator }: ParcelInterface) =>
-        operator.contacts.last_name.startsWith(filteredOperator)
+      this.filteredParcels = this.filteredParcels.filter(({ delivery_operator }: ParcelInterface) =>
+        delivery_operator.name.startsWith(filteredOperator)
+
       );
     }
 

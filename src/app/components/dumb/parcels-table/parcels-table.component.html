@@ -27,15 +27,15 @@
       <td><input formControlName="operator" type="text" placeholder="Enter operator name"
                  class="form-control filter operator-filter"/></td>
     </tr>
-    <tr *ngFor="let parcel of filteredParcels; let i = index">
+    <tr *ngFor="let parcel of parcels; let i = index">
       <td class="text-center">{{ getIndex(i) }}</td>
       <td>
         <app-parcel-card [parcel]="parcel"></app-parcel-card>
       </td>
-      <td>{{ parcel.arrivalDate }}</td>
-      <td>{{ parcel.status }}</td>
+      <td>{{ parcel.delivery_period.end }}</td>
+      <td>{{ parcel.status.replace('_', ' ') }}</td>
       <td>
-        <app-driver-card [driver]="parcel.operator"></app-driver-card>
+        <app-driver-card [driver]="parcel.delivery_operator"></app-driver-card>
       </td>
     </tr>
   </table>

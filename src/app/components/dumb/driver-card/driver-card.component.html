@@ -12,6 +12,7 @@
       <div class="card-element">
         <div class="name padder" style="font-size: 30px"> {{driver.contacts.first_name}} {{driver.contacts.last_name}}</div>
         <div class="padder driver-status"> {{ driver.status }}</div>
+        <div class="last-update padder">Last updated: {{driver.location_update_time}}</div>
       </div>
 
       <button type="button" class="btn btn-success card-element" style="float: right; width: 100px; height: 50px"

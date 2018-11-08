@@ -3,12 +3,14 @@ import { AddressInterface } from './address-interface';
 
 export class ParcelInterface {
   id: number;
-  // deliveryPeriod: JSON;
-  // priority: number;
-  // adressTo: AddressInterface;
-  // addressFrom: AddressInterface;
-  // isAddigned: boolean;
-  arrivalDate: string;
+  delivery_period: {
+    start: string;
+    end: string;
+  };
+  priority: number;
+  address_to: AddressInterface;
+  address_from: AddressInterface;
+  is_assigned: boolean;
   status: string;
-  operator: OperatorInterface;
+  delivery_operator: OperatorInterface;
 }
