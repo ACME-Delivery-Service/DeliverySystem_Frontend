@@ -13,7 +13,7 @@ export class ApiService {
   }
 
   public get getOrdersList() {
-    return `${this.baseUrl}/orders/list`;
+    return `${this.baseUrl}/order/list`;
   }
 
 }

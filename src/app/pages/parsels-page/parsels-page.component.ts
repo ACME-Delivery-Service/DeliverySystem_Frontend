@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../interfaces/parcel-interface';
-import { OperatorInterface } from '../../interfaces/operator-interface';
-import { UserService } from '../../services/user.service';
+import { OrdersListInterface } from '../../interfaces/orders-list-interface';
+import { OrdersListService } from '../../services/orders-list.service';
 
 @Component({
   selector: 'app-parcels-page',
@@ -9,130 +9,16 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./parcels-page.component.css']
 })
 export class ParcelsPageComponent implements OnInit {
+
   public parcels: ParcelInterface[];
 
-  constructor(private userService: UserService) {}
-
-  ngOnInit() {
-
-    const operator1: OperatorInterface = {
-      avatar: 'assets/img/elijah.png',
-      name: 'John Vorbob',
-      contacts: null,
-      location: null,
-      status: 'Occupied',
-      location_update_time: null,
-      id: 12
-    };
-
-    const operator2: OperatorInterface = {
-      avatar: 'assets/img/elijah.png',
-      name: 'Elijah Deliverer',
-      status: 'Occupied',
-      contacts: null,
-      location: null,
-      location_update_time: null,
-      id: 123
-    };
-
-    const operator3: OperatorInterface = {
-      avatar: 'assets/img/eva.jpg',
-      name: 'Eva Qutie',
-      status: 'Occupied',
-      contacts: null,
-      location: null,
-      location_update_time: null,
-      id: 1234
-    };
-
-    const parcel1: ParcelInterface = {
-      id: 16209,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status:  'OK',
-      operator: operator1
-    };
-
-    const parcel2: ParcelInterface = {
-      id: 16876,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status: 'DELAY',
-      operator: operator3
-    };
-
-    const parcel3: ParcelInterface = {
-      id: 16098,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status: 'OK',
-      operator: operator2
-    };
-
-    const parcel4: ParcelInterface = {
-      id: 16020,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status: 'DELAY',
-      operator: operator1
-    };
-
-    const parcel5: ParcelInterface = {
-      id: 16735,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status: 'OK',
-      operator: operator2
-    };
-
-    const parcel6: ParcelInterface = {
-      id: 17592,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status: 'OK',
-      operator: operator2
-    };
-
-    const parcel7: ParcelInterface = {
-      id: 16027,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status: 'DELAY',
-      operator: operator3
-    };
-
-    const parcel8: ParcelInterface = {
-      id: 16022,
-      delivery_period: null,
-      priority: null,
-      adressTo: null,
-      addressFrom: null,
-      isAssigned: true,
-      delivery_status: 'DELAY',
-      operator: operator1
-    };
-
-    this.parcels = [parcel1, parcel2, parcel3, parcel4, parcel5, parcel6, parcel7, parcel8];
+  constructor(private ordersListService: OrdersListService) {
+    this.ordersListService.getOrdersList().subscribe((orders: OrdersListInterface) => {
+        this.parcels = orders.results;
+        console.warn(orders);
+      }
+    );
   }
+
+  ngOnInit() {}
 }

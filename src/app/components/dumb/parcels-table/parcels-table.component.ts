@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../../interfaces/parcel-interface';
 import { FormControl, FormGroup } from '@angular/forms';
-import { OrdersListService } from '../../../services/orders-list.service';
-import { OrdersListInterface } from '../../../interfaces/orders-list-interface';
 
 @Component({
   selector: 'app-parcels-table',
@@ -14,17 +12,8 @@ export class ParcelsTableComponent implements OnInit {
   parcels: ParcelInterface[];
 
   public formGroup: FormGroup;
-  public availableStatuses: string[] = ['OK', 'DELAY'];
+  public availableStatuses: string[] = ['created', 'approved', 'en_route', 'stored', 'delivered'];
   public filteredParcels;
-  public ordersList: OrdersListInterface;
-
-  constructor(private ordersListService: OrdersListService) {
-    this.ordersListService.getOrdersList().subscribe((orders: OrdersListInterface) => {
-        this.ordersList = orders;
-        console.warn(orders);
-      }
-    );
-  }
 
   ngOnInit() {
     this.formGroup = new FormGroup({
@@ -61,14 +50,14 @@ export class ParcelsTableComponent implements OnInit {
     }
 
     if (!!filteredOperator) {
-      this.filteredParcels = this.filteredParcels.filter(({ operator }: ParcelInterface) =>
-        operator.name.startsWith(filteredOperator)
+      this.filteredParcels = this.filteredParcels.filter(({ delivery_operator }: ParcelInterface) =>
+        delivery_operator.name.startsWith(filteredOperator)
       );
     }
 
     if (!!filteredStatus) {
-      this.filteredParcels = this.filteredParcels.filter(({ delivery_status }: ParcelInterface) =>
-        delivery_status.toString().startsWith(filteredStatus)
+      this.filteredParcels = this.filteredParcels.filter(({ status }: ParcelInterface) =>
+        status.toString().startsWith(filteredStatus)
       );
     }
   }

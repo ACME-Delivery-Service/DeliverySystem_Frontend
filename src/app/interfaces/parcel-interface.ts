@@ -8,10 +8,11 @@ export class ParcelInterface {
     end: string;
   };
   priority: number;
-  adressTo: AddressInterface;
-  addressFrom: AddressInterface;
-  isAssigned: boolean;
-  delivery_status: string;
-  operator: OperatorInterface;
+  address_to: AddressInterface;
+  address_from: AddressInterface;
+  is_assigned: boolean;
+  status: string;
+  delivery_operator: OperatorInterface;
 }
+
 
