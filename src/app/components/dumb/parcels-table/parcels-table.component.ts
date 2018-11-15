@@ -1,10 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ParcelInterface } from '../../../interfaces/parcel-interface';
 import { FormControl, FormGroup } from '@angular/forms';
 import { OrdersListInterface } from '../../../interfaces/orders-list-interface';
 import { OrdersListService } from '../../../services/orders-list.service';
 import { OperatorInterface } from '../../../interfaces/operator-interface';
-import { AddressInterface } from '../../../interfaces/address-interface';
 
 @Component({
   selector: 'app-parcels-table',
@@ -63,7 +62,7 @@ export class ParcelsTableComponent implements OnInit {
 
     const operator3: OperatorInterface = {
       avatar: 'assets/img/eva.jpg',
-      status: 'Occupied',
+      status: 'Not occupied',
       contacts: {
         address: null,
         phone_number: '+7912492904',
@@ -81,7 +80,7 @@ export class ParcelsTableComponent implements OnInit {
     const parcel1: ParcelInterface = {
       id: 16209,
       delivery_period: { start: '11.10.2018 15:30', end: '11.10.2018 15:30' },
-      status: 'OK',
+      status: 'DELAY',
       delivery_operator: operator1,
       priority: 1,
       address_to: null,
