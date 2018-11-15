@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { OperatorInterface } from '../../../interfaces/operator-interface';
 
 @Component({
   selector: 'app-delivery-map',
@@ -10,7 +9,8 @@ export class DeliveryMapComponent {
   title = 'My first AGM project';
   lat = 55.752134;
   lng = 48.744498;
-  zoom = 15;
+  lat_long = [];
+  zoom = 13;
 
   drivers = [
     {
