@@ -30,8 +30,8 @@ export class ParcelCardComponent {
   };
   closeResult: string;
   modalReference: any;
-  lat = 55.752134;
-  lng = 48.744498;
+  lat = 56.840483;
+  lng = 60.607802;
 
   constructor(private modalService: NgbModal) {}
 
