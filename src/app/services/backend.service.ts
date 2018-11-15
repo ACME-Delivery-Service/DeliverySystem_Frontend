@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse, HttpResponseBase } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { UserInterface } from '../interfaces/user-interface';
 import { OrdersListInterface } from '../interfaces/orders-list-interface';
+import { OperatorInterface } from '../interfaces/operator-interface';
 
 @Injectable()
 export class BackendService {
@@ -19,5 +20,9 @@ export class BackendService {
 
   public getOrdersList(address: string): Observable<OrdersListInterface> {
     return this.http.get<OrdersListInterface>(address, {});
+  }
+
+  public getDriverInfo(address: string): Observable<OperatorInterface> {
+    return this.http.get<OperatorInterface>(address, {});
   }
 }

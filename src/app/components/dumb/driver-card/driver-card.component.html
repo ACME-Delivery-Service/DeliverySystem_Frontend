@@ -7,10 +7,10 @@
   </div>
   <div class="modal-body">
     <div class="custom-card">
-      <img src="{{ driver.avatar}}" alt="Circle Image" class="rounded-circle card-element"
+      <img src="{{ driverUpdated.avatar}}" alt="Circle Image" class="rounded-circle card-element"
            style="height: 100px">
       <div class="card-element">
-        <div class="name padder" style="font-size: 30px"> {{driver.contacts.first_name}} {{driver.contacts.last_name}}</div>
+        <div class="name padder" style="font-size: 30px"> {{driverUpdated.contacts.first_name}} {{driverUpdated.contacts.last_name}}</div>
         <div class="padder driver-status"> {{ driver.status }}</div>
         <div class="last-update padder">Last updated: {{driver.location_update_time}}</div>
       </div>
@@ -25,7 +25,7 @@
     <h5>Driver's location:</h5>
     <div class="map">
       <agm-map class="map" [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        <agm-marker [latitude]="driverUpdated.location.location.latitude" [longitude]="driverUpdated.location.location.longitude"></agm-marker>
       </agm-map>
     </div>
     <div class="space"></div>

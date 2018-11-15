@@ -20,6 +20,7 @@ import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { OrdersListService } from './services/orders-list.service';
 import { DialerService } from './services/dialer.service';
+import { DriverInfoService } from './services/driver-info.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,6 +46,7 @@ import { DialerService } from './services/dialer.service';
     UserService,
     DialerService,
     OrdersListService,
+    DriverInfoService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
