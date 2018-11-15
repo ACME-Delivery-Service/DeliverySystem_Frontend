@@ -13,7 +13,7 @@ export class DriverCardComponent implements OnInit {
   @Input()
   driver: OperatorInterface;
   @Input()
-    isFull: boolean;
+  isFull: boolean;
 
   closeResult: string;
   modalReference: any;

@@ -8,8 +8,9 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent],
-      imports: [SharedModule, RouterModule],
-    }).compileComponents();л
+      imports: [SharedModule, RouterModule]
+    }).compileComponents();
+    л;
   }));
 
   it('should create the app', async(() => {
