@@ -26,6 +26,9 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false
+    singleRun: false,
+    files: [
+      '/Users/nicholas/WebstormProjects/SA_Front/node_modules/jquery/src/jquery.js'
+    ],
   });
 };
