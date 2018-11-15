@@ -3,6 +3,8 @@ import { ParcelInterface } from '../../../interfaces/parcel-interface';
 import { FormControl, FormGroup } from '@angular/forms';
 import { OrdersListInterface } from '../../../interfaces/orders-list-interface';
 import { OrdersListService } from '../../../services/orders-list.service';
+import { OperatorInterface } from '../../../interfaces/operator-interface';
+import { AddressInterface } from '../../../interfaces/address-interface';
 
 
 @Component({
@@ -11,20 +13,51 @@ import { OrdersListService } from '../../../services/orders-list.service';
   styleUrls: ['./parcels-table.component.css']
 })
 export class ParcelsTableComponent implements OnInit {
-  @Input()
-  parcels: ParcelInterface[];
+  // @Input()
+  // parcels: ParcelInterface[];
 
   public formGroup: FormGroup;
   public availableStatuses: string[] = ['created', 'approved', 'en_route', 'stored', 'delivered'];
   public filteredParcels;
   public ordersList: OrdersListInterface;
+  public parcels;
 
   constructor(private ordersListService: OrdersListService) {
     this.ordersListService.getOrdersList().subscribe((orders: OrdersListInterface) => {
       this.ordersList = orders;
       console.warn(orders);
     });
+
+    this.parcels = [{
+      id: 1,
+      delivery_period: {
+        start: '2018-11-14T20:37:21Z',
+        end: '2018-11-15T20:37:21Z',
+      },
+      priority: 1,
+      address_to: { address: 'Universitetskaya street 1', location: { latitude: 45, longitude: 45 } },
+      address_from: { address: 'Universitetskaya street 1', location: { latitude: 45, longitude: 45 } },
+      is_assigned: false,
+      status: 'created',
+      delivery_operator: {
+        avatar: 'assets/img/mike.jpg',
+        contacts: {
+          address: null,
+          phone_number: '+7912492904',
+          additional_info: null,
+          first_name: 'John',
+          last_name: 'Vorbob',
+          position: null,
+          company: null
+        },
+        location: null,
+        status: 'Occupied',
+        location_update_time: null,
+        id: 12
+      },
+    }];
   }
+
 
   ngOnInit() {
     this.formGroup = new FormGroup({

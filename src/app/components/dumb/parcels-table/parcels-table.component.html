@@ -35,7 +35,7 @@
       <td>{{ parcel.delivery_period.end }}</td>
       <td>{{ parcel.status.replace('_', ' ') }}</td>
       <td>
-        <app-driver-card [driver]="parcel.delivery_operator"></app-driver-card>
+        <app-driver-card [isFull]="true" [driver]="parcel.delivery_operator"></app-driver-card>
       </td>
     </tr>
   </table>

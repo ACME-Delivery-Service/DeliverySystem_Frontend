@@ -46,3 +46,8 @@
 .padder {
   padding: 5px 10px 10px 30px;
 }
+
+.choose-operator {
+  width: 100px;
+  height: 100px;
+}
